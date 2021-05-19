@@ -1,7 +1,7 @@
 from boto3 import client
 
 ssm=client('ssm')
-Instanceslist=['i-0854b4420c5512791']
+Instanceslist=['i-_____________']
 
 def lambda_handler(events,context):
     temp=ssm.send_command(InstanceIds=Instanceslist,DocumentName='AWS-RunPowerShellScript',Parameters={'commands':[r'iisreset']})
